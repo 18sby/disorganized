@@ -15,10 +15,13 @@ module.exports = {
     rules: [
       {
         test: /\.ts[x]?$/,
-        loader: 'awesome-typescript-loader' 
+        use: [
+          { loader: 'awesome-typescript-loader' }
+        ] 
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           { loader: 'style-loader' },
           {
@@ -27,6 +30,15 @@ module.exports = {
               modules: true
             }
           }
+        ]
+      },
+      {
+        /* node_modules中的css文件不开启 css-loader -> modules */
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
         ]
       },
       {
