@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import HomePage from './index';
+import 'antd/dist/antd.css';
+import HomePage from './pages/home';
 
-// 引入 store
 ReactDOM.render(
-  <HomePage name={ 'bart' } />,
-  document.getElementById( "app" )
+  <HomePage author={ 'bart' } />,
+  document.getElementById( 'app' )
 )

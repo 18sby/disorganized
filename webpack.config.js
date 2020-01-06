@@ -7,7 +7,7 @@ const ROOT = path.resolve( __dirname );
 module.exports = {
   entry: './src/App.tsx',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: ROOT + '/dist'
   },
   devtool: 'source-map',
@@ -18,6 +18,14 @@ module.exports = {
         use: [
           { loader: 'awesome-typescript-loader' }
         ] 
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.css$/,
