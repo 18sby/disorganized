@@ -1,7 +1,9 @@
-.home-container {
-  background: aqua;
+.homepage-container {
+  max-width: 1000px;
+  margin: 0 auto;
 
-  .text {
-    color: green;
+  .top-title {
+    display: flex;
+    justify-content: center;
   }
 }
