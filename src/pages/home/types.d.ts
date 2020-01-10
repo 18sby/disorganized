@@ -10,4 +10,6 @@ export interface ISubMenu {
 export interface IHomePageState {
   leftMenu: ISubMenu[];
   leftMenuKeys: string[];
+  selectedMenu: string;
+  content: JSX.Element;
 }
