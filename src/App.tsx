@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './pages/home';
 
 ReactDOM.render(
-  <HomePage author='bart' />,
+  <Router>
+    <HomePage author='bart' />
+  </Router>,
   document.getElementById( 'app' )
 )
